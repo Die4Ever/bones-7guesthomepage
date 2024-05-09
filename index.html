@@ -1,6 +1,6 @@
 I don't know how old this website is, but it doesn't exist anymore. Luckily the Wayback Machine captured most of it (missing a bunch of images). Unfortunately the Wayback Machine is a little slow, so navigating around the house in this way is a bit of a pain, and the split screen isn't sized properly for modern screens.
 <br/>
-So I made this tweaked version that can be easily downloaded, and it runs much faster locally.
+So I made this tweaked version that can be easily self-hosted or downloaded, and it runs much faster.
 <br/>
 For the T7G page, start <a href="t7g/open.html">with the t7g/open.html file</a>
 <br/>
@@ -23,29 +23,5 @@ The messageboard was more active than I would have expected
 <a href="https://web.archive.org/web/20041205203958/http://p198.ezboard.com/ftheseventhguestandeleventhhourfrm1">https://web.archive.org/web/20041205203958/http://p198.ezboard.com/ftheseventhguestandeleventhhourfrm1</a>
 <br/>
 <br/>
-Here's how I created this:
-<br/>
-wget -rc --accept-regex '.*famvandermeer.demon.nl.*' https://web.archive.org/web/20220410211802if_/http://www.famvandermeer.demon.nl/7guesthomepage/open.html
-<br/>
-find ./web/ -type f -print0 | xargs -0 mv -t 7guesthomepage/
-<br/>
-<br/>
-Then I used VSCode to find and replace:
-<br/>
-onmouseover="(.*)" onmouseout="(.*)"
-<br/> to
-<br/>
-xonmouseover="$1" xonmouseout="$2"
-<br/>
-Because Wayback Machine didn't backup the mouseover images.
-<br/>
-And Also replaced
-<br/>
-"/web/.*/http://www.famvandermeer.demon.nl/7guesthomepage/
-<br/> to just
-"
-<br/>
-And in open.html I changed the "&lt;frameset rows" sizing
-<br/>
-<br/>
+
 Restoration and README by Die4Ever, <a href="https://github.com/Die4Ever/bones-7guesthomepage">GitHub</a>
